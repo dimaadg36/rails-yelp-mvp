@@ -1,0 +1,4 @@
+<h1>Reviews for <%= @restaurant.name %></h1>
+<% @reviews.each do |review| %>
+  <p><%= review.content %> - <%= link_to "delete", review_path(review), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
+<% end %>
